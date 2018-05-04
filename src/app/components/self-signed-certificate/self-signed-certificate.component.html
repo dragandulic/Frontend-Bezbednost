@@ -1,0 +1,94 @@
+<div>
+
+
+    <div class="glavni">
+
+      <div class="polje">
+          <div class="labela">
+            <label>Name:</label>
+          </div>
+          <div class="unos">
+            <input type="text" [(ngModel)]="subject.name" placeholder="Name">
+          </div>
+      </div>
+      <div class="polje">
+        <div class="labela">
+          <label>Surname:</label>
+        </div>
+        <div class="unos">
+          <input type="text" [(ngModel)]="subject.subject" placeholder="Surname">
+        </div>
+      </div>
+      <div class="polje">
+        <div class="labela">
+          <label>Organization:</label>
+        </div>
+        <div class="unos">
+          <input type="text" [(ngModel)]="subject.organization" placeholder="Organization">
+        </div>
+        </div>
+        <div class="polje">
+          <div class="labela">
+            <label>State:</label>
+          </div>
+          <div class="unos">
+            <input type="text" [(ngModel)]="subject.state" placeholder="State">
+          </div>
+        </div>
+        <div class="polje">
+          <div class="labela">
+            <label>Email:</label>
+          </div>
+          <div class="unos">
+            <input type="text" [(ngModel)]="subject.email" placeholder="Email">
+          </div>
+        </div>
+        <div class="polje">
+          <div class="labela">
+            <label>Password:</label>
+          </div>
+          <div class="unos">
+            <input type="text" [(ngModel)]="subject.password" placeholder="Password">
+          </div>
+          </div>
+          <div class="polje">
+            <div class="labela">
+              <label>Serial number:</label>
+            </div>
+            <div class="unos">
+              <input type="text" [(ngModel)]="subject.serialnumber" placeholder="Serial Number"> 
+            </div>
+          </div>
+          <div class="polje">
+            <div class="labela">
+              <label>Optional company name:</label>
+            </div>
+            <div class="unos">
+              <input type="text" [(ngModel)]="subject.optionalCompanyName" placeholder="Optional Company Name">
+            </div>
+          </div>
+          <div class="polje">
+            <div class="labela">
+              <label>Star date:</label>
+            </div>
+            <div class="unos">
+              <input type="text" [(ngModel)]="subject.startDate" placeholder="yyyy-mm-dd">
+            </div>
+          </div>
+          <div class="polje">
+            <div class="labela">
+              <label>End date:</label>
+            </div>
+            <div class="unos">
+              <input type="text" [(ngModel)]="subject.endDate" placeholder="yyyy-mm-dd">
+            </div>
+          </div>
+
+          <div>
+            <button (click)="addSelfSigned()" class="buttonOk">Ok</button>
+          </div>
+
+    </div>
+
+
+</div>
