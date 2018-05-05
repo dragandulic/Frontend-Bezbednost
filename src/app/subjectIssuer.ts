@@ -1,4 +1,4 @@
-export class Subject{
+export class SubjectIssuer{
 
     name: String;
     surname: String;

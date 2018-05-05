@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { Subject } from '../../subject';
+import { SubjectIssuer } from '../../subjectIssuer';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -20,8 +21,26 @@ export class SelfSignedCertificateService {
 
   }
 
+  getIssuer(): Observable<any>{
 
+    return this.http.get<any>('http://localhost:8085/certificates/getValidCertificates');
+
+  }
   
+
+  getSertificateById(id): Observable<any>{
+
+
+    return this.http.get<any>('http://localhost:8085/certificates/getCertificateOfId/'+id);
+
+  }
+
+  addSignedSertiicate(sign: SubjectIssuer): Observable<any>{
+
+    return this.http.post<any>('http://localhost:8085/certificates/signed', sign, httpOptions);
+
+
+  }
 
 
 }
