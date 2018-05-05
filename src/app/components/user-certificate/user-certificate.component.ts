@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { SScertificate } from '../../SScertificate';
 import { SelfSignedCertificateService } from '../../services/selfSignedCertificateService/self-signed-certificate.service';
+import { SScertificate } from '../../SScertificate';
 import { SubjectIssuer } from '../../subjectIssuer';
 
 @Component({
-  selector: 'app-signed-certificate',
-  templateUrl: './signed-certificate.component.html',
-  styleUrls: ['./signed-certificate.component.scss']
+  selector: 'app-user-certificate',
+  templateUrl: './user-certificate.component.html',
+  styleUrls: ['./user-certificate.component.scss']
 })
-export class SignedCertificateComponent implements OnInit {
+export class UserCertificateComponent implements OnInit {
 
   subjectIssuer: any={};
   sscertificate: SScertificate[];
-  ssc: SScertificate;
   issuer: any;
+  ssc: SScertificate;
   signedSer: SubjectIssuer;
-
   constructor(private selfSignedService: SelfSignedCertificateService) { }
 
   ngOnInit() {
@@ -31,19 +30,18 @@ export class SignedCertificateComponent implements OnInit {
 
     this.selfSignedService.getSertificateById(this.issuer)
     .subscribe(data =>{ this.ssc=  data;
-      this.subjectIssuer.issueralias = this.ssc.issueralias;
-      this.subjectIssuer.issuerpassword = this.ssc.issuerpass;
-      console.log(this.subjectIssuer.issueralias);
-      console.log(this.subjectIssuer.issuerpassword);
+      this.subjectIssuer.subjectalias = this.ssc.subjectalias;
+      this.subjectIssuer.subjpassword = this.ssc.subjpassword;
+      console.log(this.subjectIssuer.subjectalias);
+      console.log(this.subjectIssuer.subjpassword);
     });
   }
 
 
-  addSignedSer(): void{
+  addUserCer(): void{
 
-    this.selfSignedService.addSignedSertiicate(this.subjectIssuer)
+    this.selfSignedService.addUserCertificate(this.subjectIssuer)
     .subscribe(data => this.signedSer = data);
-    location.reload();
   }
 
 }

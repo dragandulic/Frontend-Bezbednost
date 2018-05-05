@@ -10,6 +10,7 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
 import { SelfSignedCertificateComponent } from './components/self-signed-certificate/self-signed-certificate.component';
 import { SelfSignedCertificateService } from './services/selfSignedCertificateService/self-signed-certificate.service';
 import { SignedCertificateComponent } from './components/signed-certificate/signed-certificate.component';
+import { UserCertificateComponent } from './components/user-certificate/user-certificate.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SignedCertificateComponent } from './components/signed-certificate/sign
     SubjectComponent,
     WelcomepageComponent,
     SelfSignedCertificateComponent,
-    SignedCertificateComponent
+    SignedCertificateComponent,
+    UserCertificateComponent
   ],
   imports: [
     BrowserModule,

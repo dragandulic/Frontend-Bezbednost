@@ -39,8 +39,12 @@ export class SelfSignedCertificateService {
 
     return this.http.post<any>('http://localhost:8085/certificates/signed', sign, httpOptions);
 
-
   }
 
+  addUserCertificate(sign: SubjectIssuer): Observable<any>{
 
+    return this.http.post<any>('http://localhost:8085/certificates/usersigned', sign, httpOptions);
+
+  }
+  
 }
