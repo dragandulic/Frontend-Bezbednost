@@ -8,7 +8,7 @@
           <label>Name:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.name" placeholder="Name">
+          <input type="text" [(ngModel)]="subjectIssuer.name" placeholder="Name" #name>
         </div>
     </div>
     <div class="polje">
@@ -16,7 +16,7 @@
         <label>Surname:</label>
       </div>
       <div class="unos">
-        <input type="text" [(ngModel)]="subjectIssuer.surname" placeholder="Surname">
+        <input type="text" [(ngModel)]="subjectIssuer.surname" placeholder="Surname" #surname>
       </div>
     </div>
     <div class="polje">
@@ -24,7 +24,7 @@
         <label>Organization:</label>
       </div>
       <div class="unos">
-        <input type="text" [(ngModel)]="subjectIssuer.organization" placeholder="Organization">
+        <input type="text" [(ngModel)]="subjectIssuer.organization" placeholder="Organization" #org>
       </div>
       </div>
       <div class="polje">
@@ -32,7 +32,7 @@
           <label>State:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.state" placeholder="State">
+          <input type="text" [(ngModel)]="subjectIssuer.state" placeholder="State" #state>
         </div>
       </div>
       <div class="polje">
@@ -40,7 +40,7 @@
           <label>Email:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.email" placeholder="Email">
+          <input type="text" [(ngModel)]="subjectIssuer.email" placeholder="Email" #email>
         </div>
       </div>
       <div class="polje">
@@ -48,7 +48,7 @@
           <label>Password:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.password" placeholder="Password">
+          <input type="text" [(ngModel)]="subjectIssuer.password" placeholder="Password" #pass>
         </div>
         </div>
         <div class="polje">
@@ -56,7 +56,7 @@
             <label>Serial number:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.serialnumber" placeholder="Serial Number"> 
+            <input type="text" [(ngModel)]="subjectIssuer.serialnumber" placeholder="Serial Number" #sernum> 
           </div>
         </div>
         <div class="polje">
@@ -64,7 +64,7 @@
             <label>Optional company name:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.optionalCompanyName" placeholder="Optional Company Name">
+            <input type="text" [(ngModel)]="subjectIssuer.optionalCompanyName" placeholder="Optional Company Name" #company>
           </div>
         </div>
         <div class="polje">
@@ -72,7 +72,7 @@
             <label>Start date:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.startDate" placeholder="yyyy-mm-dd">
+            <input type="text" [(ngModel)]="subjectIssuer.startDate" placeholder="yyyy-mm-dd" #sdate>
           </div>
         </div>
         <div class="polje">
@@ -80,7 +80,7 @@
             <label>End date:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.endDate" placeholder="yyyy-mm-dd">
+            <input type="text" [(ngModel)]="subjectIssuer.endDate" placeholder="yyyy-mm-dd" #edate>
           </div>
         </div>
         <div class="polje">
@@ -88,7 +88,7 @@
             <label>Issuer:</label>
           </div>
           <div class="unos">
-            <select (change)="selectChangeHandler($event)" name="isuer" id="issuer">
+            <select (change)="selectChangeHandler($event)" name="isuer" id="issuer" #issuer>
                 <option value="" selected hidden>Choose issuer</option>
                 <option *ngFor="let iss of sscertificate" value="{{iss.id}}">{{iss.subjectalias}}</option>
             </select>
@@ -99,7 +99,7 @@
 
 
         <div>
-          <button (click)="addSignedSer()"  class="buttonOk">Ok</button>
+          <button (click)="addSignedSer(); name.value=''; surname.value=''; org.value=''; state.value=''; email.value=''; pass.value=''; sernum.value=''; company.value=''; sdate.value=''; edate.value=''; issuer.value='';"  class="buttonOk">Ok</button>
         </div>
 
   </div>

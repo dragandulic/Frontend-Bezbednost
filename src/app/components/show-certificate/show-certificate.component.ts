@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { SelfSignedCertificateService } from '../../services/selfSignedCertificateService/self-signed-certificate.service';
 import { Certificate } from 'tls';
 
+
+
+
+
+
 @Component({
   selector: 'app-show-certificate',
   templateUrl: './show-certificate.component.html',
@@ -24,7 +29,7 @@ export class ShowCertificateComponent implements OnInit {
     .subscribe(data =>{ this.certificate = data;
      
      
-      console.log(this.certificate);
+     console.log(this.certificate);
     });
 
   }

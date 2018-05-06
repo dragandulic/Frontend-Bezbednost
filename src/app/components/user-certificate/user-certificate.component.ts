@@ -30,10 +30,10 @@ export class UserCertificateComponent implements OnInit {
 
     this.selfSignedService.getSertificateById(this.issuer)
     .subscribe(data =>{ this.ssc=  data;
-      this.subjectIssuer.subjectalias = this.ssc.subjectalias;
-      this.subjectIssuer.subjpassword = this.ssc.subjpassword;
-      console.log(this.subjectIssuer.subjectalias);
-      console.log(this.subjectIssuer.subjpassword);
+      this.subjectIssuer.issueralias = this.ssc.subjectalias;
+      this.subjectIssuer.issuerpassword = this.ssc.subjpassword;
+      console.log(this.subjectIssuer.issueralias);
+      console.log(this.subjectIssuer.issuerpassword);
     });
   }
 

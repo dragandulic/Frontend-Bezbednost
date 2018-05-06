@@ -8,7 +8,7 @@
             <label>Name:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subject.name" placeholder="Name">
+            <input type="text" [(ngModel)]="subject.name" placeholder="Name" #name>
           </div>
       </div>
       <div class="polje">
@@ -16,7 +16,7 @@
           <label>Surname:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subject.surname" placeholder="Surname">
+          <input type="text" [(ngModel)]="subject.surname" placeholder="Surname" #surname>
         </div>
       </div>
       <div class="polje">
@@ -24,7 +24,7 @@
           <label>Organization:</label>
         </div>
         <div class="unos">
-          <input type="text" [(ngModel)]="subject.organization" placeholder="Organization">
+          <input type="text" [(ngModel)]="subject.organization" placeholder="Organization" #org>
         </div>
         </div>
         <div class="polje">
@@ -32,7 +32,7 @@
             <label>State:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subject.state" placeholder="State">
+            <input type="text" [(ngModel)]="subject.state" placeholder="State" #state>
           </div>
         </div>
         <div class="polje">
@@ -40,7 +40,7 @@
             <label>Email:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subject.email" placeholder="Email">
+            <input type="text" [(ngModel)]="subject.email" placeholder="Email" #email>
           </div>
         </div>
         <div class="polje">
@@ -48,7 +48,7 @@
             <label>Password:</label>
           </div>
           <div class="unos">
-            <input type="text" [(ngModel)]="subject.password" placeholder="Password">
+            <input type="text" [(ngModel)]="subject.password" placeholder="Password" #pass>
           </div>
           </div>
           <div class="polje">
@@ -56,7 +56,7 @@
               <label>Serial number:</label>
             </div>
             <div class="unos">
-              <input type="text" [(ngModel)]="subject.serialnumber" placeholder="Serial Number"> 
+              <input type="text" [(ngModel)]="subject.serialnumber" placeholder="Serial Number" #sernum> 
             </div>
           </div>
           <div class="polje">
@@ -64,7 +64,7 @@
               <label>Optional company name:</label>
             </div>
             <div class="unos">
-              <input type="text" [(ngModel)]="subject.optionalCompanyName" placeholder="Optional Company Name">
+              <input type="text" [(ngModel)]="subject.optionalCompanyName" placeholder="Optional Company Name" #company>
             </div>
           </div>
           <div class="polje">
@@ -72,7 +72,7 @@
               <label>Start date:</label>
             </div>
             <div class="unos">
-              <input type="text" [(ngModel)]="subject.startDate" placeholder="yyyy-mm-dd">
+              <input type="text" [(ngModel)]="subject.startDate" placeholder="yyyy-mm-dd" #sdate>
             </div>
           </div>
           <div class="polje">
@@ -80,12 +80,12 @@
               <label>End date:</label>
             </div>
             <div class="unos">
-              <input type="text" [(ngModel)]="subject.endDate" placeholder="yyyy-mm-dd">
+              <input type="text" [(ngModel)]="subject.endDate" placeholder="yyyy-mm-dd" #edate>
             </div>
           </div>
 
           <div>
-            <button (click)="addSelfSigned()" class="buttonOk">Ok</button>
+            <button (click)="addSelfSigned(); name.value=''; surname.value=''; org.value=''; state.value=''; email.value=''; pass.value=''; sernum.value=''; company.value=''; sdate.value=''; edate.value=''; " class="buttonOk">Ok</button>
           </div>
 
     </div>

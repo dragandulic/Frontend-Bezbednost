@@ -5,6 +5,8 @@ import { SelfSignedCertificateComponent } from './components/self-signed-certifi
 import { SignedCertificateComponent } from './components/signed-certificate/signed-certificate.component';
 import { UserCertificateComponent } from './components/user-certificate/user-certificate.component';
 import { ShowCertificateComponent } from './components/show-certificate/show-certificate.component';
+import { CheckRevocationComponent } from './components/check-revocation/check-revocation.component';
+import { RevokeCertificateComponent } from './components/revoke-certificate/revoke-certificate.component';
 
 const routes: Routes = [
 
@@ -14,7 +16,9 @@ const routes: Routes = [
         {path: 'selfSigned', component: SelfSignedCertificateComponent},
         {path: 'signedCer', component: SignedCertificateComponent},
         {path: 'userCer', component: UserCertificateComponent},
-        {path: 'showCer', component: ShowCertificateComponent}
+        {path: 'showCer', component: ShowCertificateComponent},
+        {path: 'checkRev', component: CheckRevocationComponent},
+        {path: 'revokeCer', component: RevokeCertificateComponent}
       ]
   }
 

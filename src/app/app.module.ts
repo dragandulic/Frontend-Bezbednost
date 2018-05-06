@@ -12,6 +12,9 @@ import { SelfSignedCertificateService } from './services/selfSignedCertificateSe
 import { SignedCertificateComponent } from './components/signed-certificate/signed-certificate.component';
 import { UserCertificateComponent } from './components/user-certificate/user-certificate.component';
 import { ShowCertificateComponent } from './components/show-certificate/show-certificate.component';
+import { CheckRevocationComponent } from './components/check-revocation/check-revocation.component';
+import { RevokeCertificateComponent } from './components/revoke-certificate/revoke-certificate.component';
+
 
 
 @NgModule({
@@ -22,7 +25,9 @@ import { ShowCertificateComponent } from './components/show-certificate/show-cer
     SelfSignedCertificateComponent,
     SignedCertificateComponent,
     UserCertificateComponent,
-    ShowCertificateComponent
+    ShowCertificateComponent,
+    CheckRevocationComponent,
+    RevokeCertificateComponent
   ],
   imports: [
     BrowserModule,

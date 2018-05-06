@@ -31,8 +31,8 @@ export class SignedCertificateComponent implements OnInit {
 
     this.selfSignedService.getSertificateById(this.issuer)
     .subscribe(data =>{ this.ssc=  data;
-      this.subjectIssuer.issueralias = this.ssc.issueralias;
-      this.subjectIssuer.issuerpassword = this.ssc.issuerpass;
+      this.subjectIssuer.issueralias = this.ssc.subjectalias;
+      this.subjectIssuer.issuerpassword = this.ssc.subjpassword;
       console.log(this.subjectIssuer.issueralias);
       console.log(this.subjectIssuer.issuerpassword);
     });
@@ -43,7 +43,7 @@ export class SignedCertificateComponent implements OnInit {
 
     this.selfSignedService.addSignedSertiicate(this.subjectIssuer)
     .subscribe(data => this.signedSer = data);
-    location.reload();
+    //location.reload();
   }
 
 }

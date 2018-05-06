@@ -54,4 +54,16 @@ export class SelfSignedCertificateService {
 
   }
 
+  checkStatus(id): Observable<any> {
+
+    return this.http.get<any>('http://localhost:8085/certificates/checkStatus/'+id);
+
+  }
+
+  revokeCerti(id): Observable<any> {
+
+    return this.http.get<any>('http://localhost:8085/certificates/revokeCertificate/'+id);
+
+  }
+
 }
