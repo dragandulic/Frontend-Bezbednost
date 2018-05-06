@@ -43,7 +43,7 @@ export class SignedCertificateComponent implements OnInit {
 
     this.selfSignedService.addSignedSertiicate(this.subjectIssuer)
     .subscribe(data => this.signedSer = data);
-    //location.reload();
+    location.reload();
   }
 
 }

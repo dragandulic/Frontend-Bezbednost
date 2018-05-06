@@ -42,6 +42,7 @@ export class UserCertificateComponent implements OnInit {
 
     this.selfSignedService.addUserCertificate(this.subjectIssuer)
     .subscribe(data => this.signedSer = data);
+    location.reload();
   }
 
 }

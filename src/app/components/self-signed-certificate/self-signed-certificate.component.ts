@@ -23,7 +23,7 @@ export class SelfSignedCertificateComponent implements OnInit {
 
     this.selfSignedService.addSelfSignedCer(this.subject)
     .subscribe(data => this.sub=data);
-
+    location.reload();
   }
 
 
