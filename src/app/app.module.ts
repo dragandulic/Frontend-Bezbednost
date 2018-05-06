@@ -11,6 +11,7 @@ import { SelfSignedCertificateComponent } from './components/self-signed-certifi
 import { SelfSignedCertificateService } from './services/selfSignedCertificateService/self-signed-certificate.service';
 import { SignedCertificateComponent } from './components/signed-certificate/signed-certificate.component';
 import { UserCertificateComponent } from './components/user-certificate/user-certificate.component';
+import { ShowCertificateComponent } from './components/show-certificate/show-certificate.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { UserCertificateComponent } from './components/user-certificate/user-cer
     WelcomepageComponent,
     SelfSignedCertificateComponent,
     SignedCertificateComponent,
-    UserCertificateComponent
+    UserCertificateComponent,
+    ShowCertificateComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
 import { SelfSignedCertificateComponent } from './components/self-signed-certificate/self-signed-certificate.component';
 import { SignedCertificateComponent } from './components/signed-certificate/signed-certificate.component';
 import { UserCertificateComponent } from './components/user-certificate/user-certificate.component';
+import { ShowCertificateComponent } from './components/show-certificate/show-certificate.component';
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
       children:[
         {path: 'selfSigned', component: SelfSignedCertificateComponent},
         {path: 'signedCer', component: SignedCertificateComponent},
-        {path: 'userCer', component: UserCertificateComponent}
+        {path: 'userCer', component: UserCertificateComponent},
+        {path: 'showCer', component: ShowCertificateComponent}
       ]
   }
 

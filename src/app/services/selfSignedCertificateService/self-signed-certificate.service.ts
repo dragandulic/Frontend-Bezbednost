@@ -47,4 +47,11 @@ export class SelfSignedCertificateService {
 
   }
   
+
+  getCertificateById(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:8085/certificates/getCertificate/'+id);
+
+  }
+
 }
