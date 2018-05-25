@@ -1,0 +1,58 @@
+<div>
+
+  <div>
+    <h1 class="header">Registration</h1>
+  </div>
+  <hr>
+
+  <form (ngSubmit)="register">
+    <div class="poz">
+   
+          <div class="div">
+            <p class="text">Email:</p>
+            <input class="input" type="text" [(ngModel)]="userr.email"  placeholder="Email" name="email" #emailr required>
+          </div>
+     
+          <div class="div">
+            <p class="text">Password:</p>
+            <input class="input" type="password" [(ngModel)]="userr.newPassword"  placeholder="Password" name="password" #newPassr required>
+          </div>
+     
+          <div class="div">
+            <p class="text">Repeat password:</p>
+            <input class="input" type="password" [(ngModel)]="userr.repeatPassword"   placeholder="Repeat password" name="repeatpassword" #repeatPassr required>
+          </div>
+     
+          <div class="div">
+            <p class="text">Name:</p>
+            <input class="input" type="text" [(ngModel)]="userr.name"   placeholder="Name" name="name" #namer required>  
+          </div>
+    
+          <div class="div">
+            <p class="text">Surname:</p>
+            <input class="input" type="text" [(ngModel)]="userr.surname"   placeholder="Surname" name="surname" #surnamer required>
+          </div>
+              
+          <div class="div">
+            <p class="text">City:</p>
+            <input class="input" type="text" [(ngModel)]="userr.city"   placeholder="City" name="city" #cityr required>
+          </div>
+       
+          <div class="div">
+            <p class="text">Phone number:</p>
+            <input class="input" type="text" [(ngModel)]="userr.phoneNumber"  placeholder="Phone number" name="phonenumber" #phoneNumr required>
+          </div>
+            
+          <input class="submit" type="submit" value="Register" (click)="register(); emailr.value=''; newPassr.value=''; repeatPassr.value=''; namer.value=''; surnamer.value=''; cityr.value=''; phoneNumr.value='' " >
+
+      
+    </div>
+
+    
+    
+
+    
+  </form>
+
+</div>
+

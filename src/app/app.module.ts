@@ -14,6 +14,13 @@ import { UserCertificateComponent } from './components/user-certificate/user-cer
 import { ShowCertificateComponent } from './components/show-certificate/show-certificate.component';
 import { CheckRevocationComponent } from './components/check-revocation/check-revocation.component';
 import { RevokeCertificateComponent } from './components/revoke-certificate/revoke-certificate.component';
+import { FirstpageComponent } from './components/firstpage/firstpage.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { UserServiceService } from './services/userService/user-service.service';
+import { LoggedinService } from './services/logedIn/loggedin.service';
+import { Ng2Webstorage } from 'ngx-webstorage';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 
 
@@ -27,16 +34,21 @@ import { RevokeCertificateComponent } from './components/revoke-certificate/revo
     UserCertificateComponent,
     ShowCertificateComponent,
     CheckRevocationComponent,
-    RevokeCertificateComponent
+    RevokeCertificateComponent,
+    FirstpageComponent,
+    LoginComponent,
+    RegistrationComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2Webstorage
   ],
   providers: [
-    SelfSignedCertificateService
+    SelfSignedCertificateService,UserServiceService,LoggedinService
   ],
   bootstrap: [AppComponent]
 })

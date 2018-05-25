@@ -1,0 +1,37 @@
+
+<div>
+
+  <div>
+    <h1 class="header">Login</h1>
+  </div>
+
+<hr>
+
+  <form>
+  <div class="poz">
+    <div class="div">
+      <p class="Text">Email:</p>
+      <input class="input" type="text" [(ngModel)]="userl.email" placeholder="Email" name="email" #email1 required>
+    </div>
+    <div class="div">
+      <p class="Text">Password:</p> 
+      <input type="password" class="input" [(ngModel)]="userl.password" placeholder="Password" name="password" #password1 required>
+    </div>
+
+    <input class="submit" type="submit" value="Login" (click)="login(); email1.value=''; password1.value=''">
+   
+  </div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

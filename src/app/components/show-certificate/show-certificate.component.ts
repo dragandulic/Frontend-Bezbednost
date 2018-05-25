@@ -6,7 +6,6 @@ import { Certificate } from 'tls';
 
 
 
-
 @Component({
   selector: 'app-show-certificate',
   templateUrl: './show-certificate.component.html',

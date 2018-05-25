@@ -1,0 +1,120 @@
+<div>
+  <div>
+      <h1 class="header">Settings</h1>
+  </div>
+  <hr>
+
+  <div class="row">
+
+          <div class="column left " style="background-color:lightblue;">
+
+      
+
+                  <div>
+                    <label class="label1">Edit user information</label>
+                   
+                  
+                    <div class="space1">  
+                    </div>
+
+                    <form (ngSubmit)="register">
+                    <div class="column">
+                      <div>
+                        <label class="label">Email</label>
+                        <input type="text" [(ngModel)]="u.email" name="email" class="in" disabled>
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                        
+                        <label  class="label">Name</label>
+                        <input type="text" [(ngModel)]="u.name" name="name" class="in" >
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                          <label class="label">Surname</label>
+                          <input type="text" [(ngModel)]="u.surname" name="surname" class="in" >
+                      </div>
+                      <div class="space2"></div>
+                      
+                      <div>
+                          <label class="label">Phone number</label>
+                          <input type="text" [(ngModel)]="u.phoneNumber" name="phoneNumber" class="in" >
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                          <label class="label">City</label>
+                          <input type="text" [(ngModel)]="u.city" name="city" class="in" >
+                      </div>
+
+                      <input class="submit" type="submit"  value="Edit"   (click)="editUser()" >
+                    </div>
+
+                    
+                  </form>
+
+
+
+                  </div>
+          
+                  
+          </div>
+
+          <div class="column space">
+
+          </div>
+        
+          <div class="column right" style="background-color:lightblue;">
+                
+              <label class="label3">Edit password</label>
+              <div >
+                  
+                  <div class="space1">  
+                  </div>
+
+                      <form (ngSubmit)="register">
+                      <div class="column">
+                        <div>
+                          <label class="label">Email</label>
+                          <input type="text" [(ngModel)]="u.email" name="email" class="in" disabled>
+                        </div>
+                        <div class="space2"></div>
+                        <div>
+                          
+                          <label  class="label">Current password</label>
+                          <input type="text" [(ngModel)]="pass" name="password" class="in" #passw required>
+                        </div>
+                        <div class="space2"></div>
+                        <div>
+                          
+                          <label  class="label">New password</label>
+                          <input type="text" [(ngModel)]="newpp" name="newPassword" class="in" #newp required>
+                        </div>
+                        <div class="space2"></div>
+                        <div>
+                            <label class="label">Repeat password</label>
+                            <input type="text" [(ngModel)]="currp" name="repeatPassword" class="in" #repp required>
+                        </div>
+                        <div class="space2"></div>
+                        
+                        
+                        <input class="submit" type="submit"  value="Edit "   (click)="editPassword(); passw.value=''; newp.value='';repp.value='' " >
+                      </div>
+
+                      
+                    </form>
+
+
+
+                  
+              </div>
+                
+        
+          </div>
+
+
+  </div>
+
+
+
+
+</div>
