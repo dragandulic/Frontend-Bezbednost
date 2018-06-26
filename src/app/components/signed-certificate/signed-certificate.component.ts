@@ -12,6 +12,7 @@ export class SignedCertificateComponent implements OnInit {
 
   subjectIssuer: any={};
   sscertificate: SScertificate[];
+  issuers:any;
   ssc: SScertificate;
   issuer: any;
   signedSer: SubjectIssuer;
@@ -20,15 +21,15 @@ export class SignedCertificateComponent implements OnInit {
 
   ngOnInit() {
 
-    this.selfSignedService.getIssuer()
-    .subscribe(data => this.sscertificate = data);
+    this.selfSignedService.getIssuers()
+    .subscribe(data => this.issuers = data.issuers);
 
   }
 
   selectChangeHandler (event : any){
-
+   if(event.target.value!="no valid issuers"){
     this.issuer = event.target.value;
-
+      
     this.selfSignedService.getSertificateById(this.issuer)
     .subscribe(data =>{ this.ssc=  data;
       this.subjectIssuer.issueralias = this.ssc.subjectalias;
@@ -37,7 +38,7 @@ export class SignedCertificateComponent implements OnInit {
       console.log(this.subjectIssuer.issuerpassword);
     });
   }
-
+}
 
   addSignedSer(): void{
 

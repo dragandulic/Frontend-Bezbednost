@@ -16,6 +16,9 @@ export class ShowCertificateComponent implements OnInit {
   serialnumber: any;
   response: any;
   certificate: Certificate;
+  
+  
+
   constructor(private selfSignedCer: SelfSignedCertificateService) { }
 
   ngOnInit() {
@@ -25,7 +28,7 @@ export class ShowCertificateComponent implements OnInit {
   getCer(): void{
 
     this.selfSignedCer.getCertificateById(this.serialnumber)
-    .subscribe(data =>{ this.certificate = data;
+    .subscribe(data =>{ this.certificate = data.certificate;
      
      
      console.log(this.certificate);

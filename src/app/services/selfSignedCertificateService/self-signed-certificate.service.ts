@@ -21,9 +21,9 @@ export class SelfSignedCertificateService {
 
   }
 
-  getIssuer(): Observable<any>{
+  getIssuers(): Observable<any>{
 
-    return this.http.get<any>('http://localhost:8085/certificates/getValidCertificates');
+    return this.http.get<any>('http://localhost:8085/certificates/getValidIssuers');
 
   }
   
