@@ -45,7 +45,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    Ng2Webstorage
+    Ng2Webstorage,
+    ReactiveFormsModule
   ],
   providers: [
     SelfSignedCertificateService,UserServiceService,LoggedinService

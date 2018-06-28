@@ -1,108 +1,87 @@
-<div>
-
-
-  <div class="glavni">
-
-    <div class="polje">
-        <div class="labela">
-          <label>Name:</label>
-        </div>
-        <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.name" placeholder="Name" #name>
-        </div>
+<form [formGroup]="form" (ngSubmit)="addSignedSer()">
+  <div class="container">
+    <div class="row">
+       <div class="col-xs-2 col-sm-2 col-md-2">
+          <div class="form-group">
+             <p>Name</p> <input formControlName="name" type="text" name="name" id="name" class="form-control input-sm" placeholder="Name">
+          </div>
+       </div> 
     </div>
-    <div class="polje">
-      <div class="labela">
-        <label>Surname:</label>
-      </div>
-      <div class="unos">
-        <input type="text" [(ngModel)]="subjectIssuer.surname" placeholder="Surname" #surname>
-      </div>
-    </div>
-    <div class="polje">
-      <div class="labela">
-        <label>Organization:</label>
-      </div>
-      <div class="unos">
-        <input type="text" [(ngModel)]="subjectIssuer.organization" placeholder="Organization" #org>
-      </div>
-      </div>
-      <div class="polje">
-        <div class="labela">
-          <label>State:</label>
-        </div>
-        <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.state" placeholder="State" #state>
-        </div>
-      </div>
-      <div class="polje">
-        <div class="labela">
-          <label>Email:</label>
-        </div>
-        <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.email" placeholder="Email" #email>
-        </div>
-      </div>
-      <div class="polje">
-        <div class="labela">
-          <label>Password:</label>
-        </div>
-        <div class="unos">
-          <input type="text" [(ngModel)]="subjectIssuer.password" placeholder="Password" #pass>
-        </div>
-        </div>
-        <div class="polje">
-          <div class="labela">
-            <label>Serial number:</label>
-          </div>
-          <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.serialnumber" placeholder="Serial Number" #sernum> 
-          </div>
-        </div>
-        <div class="polje">
-          <div class="labela">
-            <label>Optional company name:</label>
-          </div>
-          <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.optionalCompanyName" placeholder="Optional Company Name" #company>
-          </div>
-        </div>
-        <div class="polje">
-          <div class="labela">
-            <label>Start date:</label>
-          </div>
-          <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.startDate" placeholder="yyyy-mm-dd" #sdate>
-          </div>
-        </div>
-        <div class="polje">
-          <div class="labela">
-            <label>End date:</label>
-          </div>
-          <div class="unos">
-            <input type="text" [(ngModel)]="subjectIssuer.endDate" placeholder="yyyy-mm-dd" #edate>
-          </div>
-        </div>
-        <div class="polje">
-          <div class="labela">
-            <label>Issuer:</label>
-          </div>
-          <div class="unos">
-            <select (change)="selectChangeHandler($event)" name="isuer" id="issuer" #issuer>
-                <option value="" selected hidden>Choose issuer</option>
-                <option *ngFor="let iss of issuers" value="{{iss}}">{{iss}}</option>
-            </select>
-          </div>
-        </div>
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>Surname</p> <input formControlName="surname" type="text" name="surname" id="surname" class="form-control input-sm" placeholder="Surname">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>Organization</p> <input formControlName="organization" type="text" name="organization" id="organization" class="form-control input-sm" placeholder="Organization">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>State</p> <input formControlName="state" type="text" name="state" id="state" class="form-control input-sm" placeholder="State">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>Email</p> <input formControlName="email" type="text" name="email" id="email" class="form-control input-sm" placeholder="Email">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>Password</p> <input formControlName="password" type="text" name="password" id="password" class="form-control input-sm" placeholder="Password">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>Serialnumber</p> <input formControlName="serialnumber" type="text" name="serialnumber" id="serialnumber" class="form-control input-sm" placeholder="Serialnumber">
+           </div>
+        </div> 
+     </div>
+     
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>OptionalCompanyName</p> <input formControlName="optionalCompanyName" type="text" name="optionalCompanyName" id="optionalCompanyName" class="form-control input-sm" placeholder="optionalCompanyName">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>StartDate</p> <input formControlName="startDate" type="text" name="startDate" id="startDate" class="form-control input-sm" placeholder="startDate">
+           </div>
+        </div> 
+     </div>
+     <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+           <div class="form-group">
+              <p>EndDate</p> <input formControlName="endDate" type="text" name="endDate" id="endDate" class="form-control input-sm" placeholder="endDate">
+           </div>
+        </div> 
+     </div>
 
+     <div class="col-md-10  input-group">
+        <select (change)="functionAlias($event.target.value)">
+            <option>       </option>
+            <option *ngFor="let issuer of issuers"  [value]="issuer">{{issuer}}</option>
+    
+          </select>
+                            </div>
 
-
-
-        <div>
-          <button (click)="addSignedSer(); name.value=''; surname.value=''; org.value=''; state.value=''; email.value=''; pass.value=''; sernum.value=''; company.value=''; sdate.value=''; edate.value=''; issuer.value='';"  class="buttonOk">Ok</button>
-        </div>
-
+       <div class="col-xs-2 col-sm-2 col-md-2">
+          <button type="submit" class="btn btn-success">Submit</button>
+       </div>
   </div>
-
-
-</div>
+</form>

@@ -12,7 +12,6 @@ export class SubjectIssuer{
     endDate: String;
 
     issueralias: String;
-    issuerpassword: String;
 
     CA: boolean;
 

@@ -19,7 +19,7 @@ export class UserCertificateComponent implements OnInit {
 
   ngOnInit() {
 
-    this.selfSignedService.getIssuer()
+    this.selfSignedService.getIssuers()
     .subscribe(data => this.sscertificate = data);
 
   }
@@ -36,7 +36,7 @@ export class UserCertificateComponent implements OnInit {
       console.log(this.subjectIssuer.issuerpassword);
     });
   }
-
+/*
 
   addUserCer(): void{
 
@@ -44,5 +44,5 @@ export class UserCertificateComponent implements OnInit {
     .subscribe(data => this.signedSer = data);
     location.reload();
   }
-
+*/
 }

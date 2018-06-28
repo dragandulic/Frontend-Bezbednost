@@ -22,7 +22,7 @@ export class WelcomepageComponent implements OnInit {
 
   ngOnInit() {
     this.user=this.getLocalStore();
-    console.log(this.user);
+    
   }
 
   logoutFun(): void{
