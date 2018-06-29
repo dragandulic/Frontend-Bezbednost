@@ -11,6 +11,7 @@ export class CheckRevocationComponent implements OnInit {
   serialnumber: any;
   poruka: any;
   poruka1: any;
+  keyStoreFile:any;
   constructor(private SelfSignedCer: SelfSignedCertificateService) { }
 
   ngOnInit() {
@@ -18,7 +19,7 @@ export class CheckRevocationComponent implements OnInit {
 
   checkRevoc(): void{
 
-    this.SelfSignedCer.checkStatus(this.serialnumber)
+    this.SelfSignedCer.checkStatus(this.serialnumber,this.keyStoreFile)
     .subscribe(data => {this.poruka=data;
       console.log(this.poruka.message);
       this.poruka1=this.poruka.message;

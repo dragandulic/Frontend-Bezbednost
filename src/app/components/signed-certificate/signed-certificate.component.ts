@@ -17,6 +17,7 @@ export class SignedCertificateComponent implements OnInit {
   ssc: SScertificate;
   issuer: any;
   signedSer: SubjectIssuer;
+  issuerFile:any;
   public form: FormGroup;
 
   constructor(private selfSignedService: SelfSignedCertificateService) { }
@@ -31,12 +32,13 @@ export class SignedCertificateComponent implements OnInit {
       password: new FormControl('',[Validators.required]),
       serialnumber: new FormControl('',[Validators.required]),
       optionalCompanyName: new FormControl('',[Validators.required]),
+      keyStoreFile: new FormControl('',[Validators.required]),
+      issuerKeyStoreFile: new FormControl('',[Validators.required]),
       startDate: new FormControl('',[Validators.required]),
       endDate: new FormControl('',[Validators.required])
     })
 
-    this.selfSignedService.getIssuers().subscribe(data => this.issuers = data.issuers);
-    console.log("ovo je ispisss osle");
+    
 
   }
 
@@ -56,8 +58,16 @@ export class SignedCertificateComponent implements OnInit {
 
     this.selfSignedService.addSignedSertiicate(signedfields,this.subjectIssuer.issueralias)
     .subscribe(data => this.signedSer = data);
-    location.reload();
+    //location.reload();
     
+  }
+
+  getIssuersFromFile(): void{
+
+
+    this.selfSignedService.getIssuers(this.issuerFile).subscribe(data => this.issuers = data.issuers);
+
+    console.log(this.issuerFile);
   }
 
 }

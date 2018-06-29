@@ -14,6 +14,7 @@ import { Certificate } from 'tls';
 export class ShowCertificateComponent implements OnInit {
 
   serialnumber: any;
+  keyStoreFile:any;
   response: any;
   certificate: Certificate;
   
@@ -27,8 +28,9 @@ export class ShowCertificateComponent implements OnInit {
 
   getCer(): void{
 
-    this.selfSignedCer.getCertificateById(this.serialnumber)
+    this.selfSignedCer.getCertificateById(this.serialnumber,this.keyStoreFile)
     .subscribe(data =>{ this.certificate = data.certificate;
+                      
      
      
      console.log(this.certificate);

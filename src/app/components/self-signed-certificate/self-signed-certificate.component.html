@@ -35,6 +35,15 @@
             <input type="text" [(ngModel)]="subject.state" placeholder="State" #state>
           </div>
         </div>
+
+        <div class="polje">
+          <div class="labela">
+            <label>KeyStoreFile:</label>
+          </div>
+          <div class="unos">
+            <input type="text" [(ngModel)]="subject.keyStoreFile" placeholder="Key Store File" #ksf>
+          </div>
+        </div>
         <div class="polje">
           <div class="labela">
             <label>Email:</label>
@@ -85,7 +94,7 @@
           </div>
 
           <div>
-            <button (click)="addSelfSigned(); name.value=''; surname.value=''; org.value=''; state.value=''; email.value=''; pass.value=''; sernum.value=''; company.value=''; sdate.value=''; edate.value=''; " class="buttonOk">Ok</button>
+            <button (click)="addSelfSigned(); name.value=''; surname.value=''; org.value=''; state.value='';keyStoreFile.value=''; email.value=''; pass.value=''; sernum.value=''; company.value=''; sdate.value=''; edate.value=''; " class="buttonOk">Ok</button>
           </div>
 
     </div>

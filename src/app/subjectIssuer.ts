@@ -10,9 +10,9 @@ export class SubjectIssuer{
     optionalCompanyName: String;
     startDate: String;
     endDate: String;
-
+    keyStoreFile:String;
     issueralias: String;
-
+    issuerKeyStoreFile:String;
     CA: boolean;
 
 }

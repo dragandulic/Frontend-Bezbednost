@@ -21,14 +21,14 @@ export class SelfSignedCertificateService {
 
   }
 
-  getIssuers(): Observable<any>{
+  getIssuers(keyStoreFile:any): Observable<any>{
 
-    return this.http.get<any>('http://localhost:8085/certificates/getValidIssuers');
+    return this.http.get<any>('http://localhost:8085/certificates/getValidIssuers/'+keyStoreFile);
 
   }
   
 
-  getSertificateById(id): Observable<any>{
+  getSertificateById(id:any,keyStoreFile:any): Observable<any>{
 
 
     return this.http.get<any>('http://localhost:8085/certificates/getCertificateOfId/'+id);
@@ -48,21 +48,21 @@ export class SelfSignedCertificateService {
   }
   
 
-  getCertificateById(id): Observable<any>{
+  getCertificateById(id:any,keyStoreFile:any): Observable<any>{
 
-    return this.http.get<any>('http://localhost:8085/certificates/getCertificate/'+id);
-
-  }
-
-  checkStatus(id): Observable<any> {
-
-    return this.http.get<any>('http://localhost:8085/certificates/checkStatus/'+id);
+    return this.http.get<any>('http://localhost:8085/certificates/getCertificate/'+id+'?keyStoreFile='+keyStoreFile);
 
   }
 
-  revokeCerti(id): Observable<any> {
+  checkStatus(id:any,keyStoreFile:any): Observable<any> {
 
-    return this.http.get<any>('http://localhost:8085/certificates/revokeCertificate/'+id);
+    return this.http.get<any>('http://localhost:8085/certificates/checkStatus/'+id+'?keyStoreFile='+keyStoreFile);
+
+  }
+
+  revokeCerti(id:any,keyStoreFile:any): Observable<any> {
+
+    return this.http.get<any>('http://localhost:8085/certificates/revokeCertificate/'+id+'?keyStoreFile='+keyStoreFile);
 
   }
 

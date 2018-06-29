@@ -18,16 +18,16 @@ export class UserCertificateComponent implements OnInit {
   constructor(private selfSignedService: SelfSignedCertificateService) { }
 
   ngOnInit() {
-
+/*
     this.selfSignedService.getIssuers()
     .subscribe(data => this.sscertificate = data);
-
+*/
   }
 
   selectChangeHandler (event : any){
 
     this.issuer = event.target.value;
-
+/*
     this.selfSignedService.getSertificateById(this.issuer)
     .subscribe(data =>{ this.ssc=  data;
       this.subjectIssuer.issueralias = this.ssc.subjectalias;
@@ -35,6 +35,7 @@ export class UserCertificateComponent implements OnInit {
       console.log(this.subjectIssuer.issueralias);
       console.log(this.subjectIssuer.issuerpassword);
     });
+    */
   }
 /*
 

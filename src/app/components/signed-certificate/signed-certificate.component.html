@@ -58,6 +58,24 @@
         </div> 
      </div>
      <div class="row">
+      <div class="col-xs-5 col-sm-5 col-md-5">
+         <div class="form-group">
+            <p>KeyStoreFile</p> <input formControlName="keyStoreFile" type="text" name="keyStoreFile" id="keyStoreFile" class="form-control input-sm" placeholder="keyStoreFile">
+         </div>
+      </div> 
+   </div>
+
+   <div class="row">
+    <div class="col-xs-5 col-sm-5 col-md-5">
+       <div class="form-group">
+          <p>IssuerKeyStoreFile</p> <input formControlName="issuerKeyStoreFile" type="text" name="issuerKeyStoreFile" id="issuerKeyStoreFile" class="form-control input-sm" placeholder="issuerKeyStoreFile"[(ngModel)]="issuerFile">
+          <button (click)="getIssuersFromFile()">Select file</button>
+       </div>
+    </div> 
+ </div>
+    
+
+     <div class="row">
         <div class="col-xs-5 col-sm-5 col-md-5">
            <div class="form-group">
               <p>StartDate</p> <input formControlName="startDate" type="text" name="startDate" id="startDate" class="form-control input-sm" placeholder="startDate">

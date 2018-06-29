@@ -11,5 +11,6 @@ export class Subject{
     startDate: String;
     endDate: String;
     CA: boolean;
+    keyStoreFile:String;
 
 }
